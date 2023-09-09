@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "efd08d70-f377-49ea-8b8d-9045eddc6f4d",
+		"name": "movie collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15612202"
+	},
+	"item": [
+		{
+			"name": "crud movie",
+			"item": [
+				{
+					"name": "add movies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Koyla\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update movies",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"title\": \"kahaani 2\",\r\n        \"genre\": \"Mystery\",\r\n        \"year\": 2012,\r\n        \"releaseDate\": \"09 Mar 2012\",\r\n        \"director\": \"Sujoy Ghosh\",\r\n        \"actors\": [\r\n            \"Vidya Balan, Parambrata Chattopadhyay, Indraneil Sengupta\"\r\n        ],\r\n        \"rating\": \"8.1\",\r\n        \"duration\": 122,\r\n        \"description\": \"A pregnant woman's search for her missing husband takes her from London to Kolkata, but everyone she questions denies having ever met him.\",\r\n        \"country\": \"India\",\r\n        \"language\": \"Hindi\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies?id=64fb9232135e9a26e42b34c1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "64fb9232135e9a26e42b34c1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete movies",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies?id=64fb95bbea9c8a8824e0abbc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "64fb95bbea9c8a8824e0abbc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get movies by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies?id=647db48cf94b9723f518ec22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "647db48cf94b9723f518ec22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get movies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search movie",
+			"item": [
+				{
+					"name": "genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/search/genres?genre=Drama",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search",
+								"genres"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "Drama"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/search/title?title=Laadla",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search",
+								"title"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Laadla"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "director",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/search/director?director=Sujoy Ghosh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"search",
+								"director"
+							],
+							"query": [
+								{
+									"key": "director",
+									"value": "Sujoy Ghosh"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "add movies using api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Koyla\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
